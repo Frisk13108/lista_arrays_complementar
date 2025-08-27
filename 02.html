@@ -14,9 +14,15 @@
     */
 
     //ENTRADA
+    let playlist = ["Everlong", "The Pretender", "Learn to Fly"];
+    let novaMusica = prompt(`Adicione uma música à esta playlist: Everlong, The Pretender, Learn to Fly`);
 
 
     //PROCESSAMENTO
+    playlist.push(novaMusica);
+    playlist.shift(0);
+
+    document.write(`[${playlist.join(`, `)}]`);
 
 
     //SAÍDA

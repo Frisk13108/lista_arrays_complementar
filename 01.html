@@ -12,10 +12,23 @@
     */
 
     //ENTRADA
+    let filaDeAtendimento = ["Ana", "Bruno", "Carla"];
+    alert(`Em uma fila de atendimento, há três pessoas: Ana, Bruno e Carla`);
+    
+    const novoCliente = prompt(`Qual o nome do próximo cliente que entrou à fila?`);
 
+    const clienteAtendido = prompt(`Qual cliente foi atendido à seguir?`);
 
     //PROCESSAMENTO
 
+    filaDeAtendimento.push(novoCliente);
+
+    if (filaDeAtendimento.indexOf(clienteAtendido) > -1) {
+        filaDeAtendimento.splice(clienteAtendido, 1);
+        document.write(`Agora a fila está com: ${filaDeAtendimento.join(`, `)}`);
+    } else {
+        alert(`Está pessoa não está na fila!`);
+    };
 
     //SAÍDA
 
